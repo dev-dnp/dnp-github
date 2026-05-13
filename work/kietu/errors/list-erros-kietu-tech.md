@@ -65,15 +65,23 @@ Uma subtarefa, após ser marcada como concluída, não é possível desmarcá-la
 
 Temos aqui diferentes edge cases: se eu alterar a minha tarefa, não preciso de ser notificado, porque fui eu quem a alterou. Agora, se eu alterar a tarefa do Domingos, faz sentido notificar o Domingos, mas com uma mensagem diferente, por exemplo: “O utilizador X alterou a sua tarefa de X para Y.”
 
----
 
 <p align="center">
   <img src="./img/306ff2fc-203f-466a-b503-ed941ff66acd.jpeg" width="600">
 </p>
 
+
+## 7. Problema no Timestamp das Notificações
+
+Todas as notificações estão a aparecer com a mensagem “há menos de um minuto”, independentemente do tempo decorrido. Possivelmente, o problema está relacionado com o frontend.
+
+
 <p align="center">
   <img src="./img/imagem7.png" width="600">
 </p>
+
+
+---
 
 # 📌 Observação
 
