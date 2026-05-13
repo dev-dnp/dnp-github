@@ -1,24 +1,74 @@
-# Erros Encontrados
+# 🐞 Erros Encontrados
+
 ---
 
-## 1. No ambiente dev a criação de um cliente ainda exige a inserção obrigatória dos seus dados bancários:
+## 1. Validação obrigatória de dados bancários no ambiente dev
 
-![erro](./img/imagem1.png)
+No ambiente de desenvolvimento, a criação de um cliente ainda exige a inserção obrigatória dos seus dados bancários, mesmo em cenários onde isso não deveria ser necessário.
 
-## 2. No ambiente dev, não se permite registar o mesmo IBAN:
-   
-![erro](./img/imagem2.png)
+<p align="center">
+  <img src="./img/imagem1.png" width="600">
+</p>
 
-## 3. Houve um momento que inseri um cliente, mas surgiu uma mensagem no frontEnd dizendo que “Não foi possível executar a operação, ou houve uma falha”. Quando tentei registar novamente os mesmo dados, a aplicação respondeu-me que o “cliente já existe”. Ou seja, o frontend retornou um erro na operação, mas mesmo assim o backend registou os dados. Não pude capturar a mensagem, mas aconteceu isso.
+---
 
-<br>
+## 2. Bloqueio de IBAN duplicado
 
-## 4. Os botões de ANTERIOR e SEGUINTE nas listas dos clientes e membros, ou talvez mais outras listas, não está funcional. Por exemplo, eu tenho 17 funcionários e a minha lista só traz 15 por vez, nesta situação os botões devem estar ativos para permitir ver os outros dois  (2) clientes que faltam.
+No ambiente dev, não é permitido registar o mesmo IBAN mais de uma vez, o que pode limitar testes de cenários repetidos.
 
-![erro](./img/imagem3.png)
+<p align="center">
+  <img src="./img/imagem2.png" width="600">
+</p>
 
-![erro](./img/imagem4.png)
+---
 
-## 5. Uma subtarefa já marcada, não desmarca no frontend
+## 3. Inconsistência entre frontend e backend ao registar cliente
 
-![erro](./img/imagem5.png)
+Em determinado momento, ao inserir um cliente, o frontend apresentou a mensagem:
+
+> “Não foi possível executar a operação, ou houve uma falha.”
+
+No entanto, ao tentar registar novamente com os mesmos dados, o sistema informou que o cliente já existia.
+
+Ou seja, o frontend indicou erro na operação, mas o backend executou o registo com sucesso.
+
+---
+
+## 4. Paginação não funcional nas listas
+
+Os botões **ANTERIOR** e **SEGUINTE** nas listas de clientes e membros (e possivelmente outras listas) não estão funcionais.
+
+Exemplo:
+- Existem 17 funcionários
+- A lista mostra apenas 15 por página
+- Os botões de navegação deveriam estar ativos para permitir ver os restantes 2 registos
+
+<p align="center">
+  <img src="./img/imagem3.png" width="600">
+</p>
+
+<p align="center">
+  <img src="./img/imagem4.png" width="600">
+</p>
+
+---
+
+## 5. Subtarefa não desmarca no frontend
+
+Uma subtarefa, após ser marcada como concluída, não é possível desmarcá-la no frontend, indicando possível problema de estado ou sincronização.
+
+<p align="center">
+  <img src="./img/imagem5.png" width="600">
+</p>
+
+---
+
+# 📌 Observação
+
+Todos os problemas acima foram observados no ambiente de desenvolvimento e podem estar relacionados a:
+- validações excessivas no frontend
+- inconsistência entre frontend e backend
+- problemas de estado (state management)
+- paginação incompleta ou desativada
+
+---
