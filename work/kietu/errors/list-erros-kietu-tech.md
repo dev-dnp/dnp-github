@@ -61,7 +61,19 @@ Uma subtarefa, após ser marcada como concluída, não é possível desmarcá-la
   <img src="./img/imagem5.png" width="600">
 </p>
 
+## 6. Notificações em Diferentes Edge Cases de Alteração de Tarefas
+
+Temos aqui diferentes edge cases: se eu alterar a minha tarefa, não preciso de ser notificado, porque fui eu quem a alterou. Agora, se eu alterar a tarefa do Domingos, faz sentido notificar o Domingos, mas com uma mensagem diferente, por exemplo: “O utilizador X alterou a sua tarefa de X para Y.”
+
 ---
+
+<p align="center">
+  <img src="./img/306ff2fc-203f-466a-b503-ed941ff66acd.jpeg" width="600">
+</p>
+
+<p align="center">
+  <img src="./img/imagem7.png" width="600">
+</p>
 
 # 📌 Observação
 
