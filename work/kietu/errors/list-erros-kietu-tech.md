@@ -73,6 +73,10 @@ Esse comportamento pode dificultar a criação rápida de subtarefas, já que o 
 
 O ideal seria permitir que a subtarefa herdasse automaticamente o prazo da tarefa principal, ou então tornar o campo de prazo opcional.
 
+<p align="center">
+  <img src="./img/prazo_subtarefa.png" width="600">
+</p>
+
 ---
 
 ## 7. Subtarefa não desmarca no frontend
